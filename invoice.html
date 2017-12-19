@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>MiniPOS Invoice</title>
+<title>Bitcoin Cash MiniPOS Invoice</title>
 <link rel="stylesheet" href="style.css">
 <script src="scripts.js"></script>
 <script>
@@ -12,15 +12,15 @@ var confirm_string = "address={addr}&amount={fiat}&currency={cur}&btc_amount={am
 
 <body onload="setTimeout(checkPayment, 5000)">
 <img id="qr" src="data:image/png;base64,{qr}" alt="" title="{request}">
-<p>Please send <strong>{amt} BCH</strong> (total {fiat} {cur})</p>
-<p>To the Bitcoin Cash address <strong class="address"><img class="icon" src="bitcoin-cash-icon.svg" alt="">{addr}</strong></p>
+<p>Please send <strong>{amt} BCH</strong> (Total {fiat} {cur})</p>
+<p>To the Bitcoin Cash address <strong class="address"><img class="icon" src="bitcoin-cash-icon.png" alt="">{addr}</strong></p>
 <p><em>(1 BCH = {price} {cur})</em></p>
-<div id="popup"><p>The payment request has timed out.</p></div>
+<div id="popup"><p>This payment request has timed out, please start again.</p></div>
 <form method="get" name="" action="cancel">
 <input type="submit" id="cancel" class="clear" value="&#10007; Cancel">
 <input type="hidden" name="address" value="{addr}">
 </form>
-<form method="get" name="" action="request">
+<form method="get" name="" action="welcome">
 <input style="display: none;" type="submit" id="finish" class="ok" value="&#10003; Finish">
 </form>
 </body>
